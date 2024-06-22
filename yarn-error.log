@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add aws-sdk
+
+PATH: 
+  /Users/x2pherion/.bun/bin:/Users/x2pherion/anaconda3/bin:/Users/x2pherion/.pyenv/shims:/Users/x2pherion/.pyenv/bin:/opt/homebrew/Cellar/dart/3.3.1/libexec/bin/:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/x2pherion/Desktop/working-space/med-project/panasonic-mobile/flutter/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/opt/homebrew/Cellar/dart/3.3.1/libexec/bin/:/Users/x2pherion/.bun/bin:/Users/x2pherion/anaconda3/bin:/Users/x2pherion/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Users/x2pherion/.pub-cache/bin:/Users/x2pherion/.pub-cache/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.10.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: /Users/x2pherion/Desktop/My Work/vp-hackathon/product_code/vp_product/node_modules/aws-sdk: spawn /bin/sh EAGAIN
+      at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+      at onErrorNT (node:internal/child_process:484:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "serverless": "^4.0.24"
+    },
+    "name": "vp-hackathon-10",
+    "version": "1.0.0",
+    "description": "VP Bank Hackthon Team 10",
+    "repository": {
+      "type": "git"
+    },
+    "author": "TPPSoft",
+    "license": "MIT",
+    "devDependencies": {
+      "serverless-domain-manager": "^6.4.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,9 @@
+lambdaFunction:
+  name: ${env:ENV_NAME}-start-payment
+  image: ${env:AWS_ACCOUNT_ID}.dkr.ecr.${env:AWS_REGION}.amazonaws.com/vp-ecr-10-start-payment-processing-service:${env:APP_VERSION}
+  role: ${env:LAMBDA_ROLE}
+  timeout: 90
+  environment:
+    STATE_PAYMENT_ARN: ${env:STATE_PAYMENT_ARN}
+    VERSION: ${env:APP_VERSION}
+    LOG_LEVEL: ${env:LOG_LEVEL}

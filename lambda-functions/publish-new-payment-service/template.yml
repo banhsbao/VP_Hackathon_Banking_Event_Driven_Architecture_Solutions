@@ -1,0 +1,9 @@
+lambdaFunction:
+  name: ${env:ENV_NAME}-publish-new-payment
+  image: ${env:AWS_ACCOUNT_ID}.dkr.ecr.${env:AWS_REGION}.amazonaws.com/vp-ecr-10-publish-new-payment-service:${env:APP_VERSION}
+  role: ${env:LAMBDA_ROLE}
+  timeout: 90
+  environment:
+    EVENT_BRIDGE_CREATE_PAYMENT_EVENT: ${env:EVENT_BRIDGE_CREATE_PAYMENT_EVENT}
+    VERSION: ${env:APP_VERSION}
+    LOG_LEVEL: ${env:LOG_LEVEL}

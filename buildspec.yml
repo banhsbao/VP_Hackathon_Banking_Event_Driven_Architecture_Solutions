@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing Serverless Framework...
+      - npm install -g serverless
+      - npm install
+  pre_build:
+    commands:
+      - echo Setting up environment...
+      - export APP_VERSION=$(date +%Y%m%d%H%M%S)
+      - echo "APP_VERSION=$APP_VERSION"
+  build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - chmod +x build_and_push.sh
+      - ./build_and_push.sh
+  post_build:
+    commands:
+      - echo Serverless Deploying...
+      - chmod +x deploy_all_lambda.sh
+      - ./deploy_all_lambda.sh
+artifacts:
+  files:
+    - "**/*"

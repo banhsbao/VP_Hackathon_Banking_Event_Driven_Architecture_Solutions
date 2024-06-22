@@ -1,0 +1,4 @@
+default:
+  aws_account_id: ${env:AWS_ACCOUNT_ID}
+  aws_region: ${env:AWS_REGION}
+  env_name: ${env:ENV_NAME}

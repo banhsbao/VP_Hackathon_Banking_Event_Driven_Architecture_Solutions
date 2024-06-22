@@ -1,0 +1,12 @@
+lambdaFunction:
+  name: ${env:ENV_NAME}-payment-notification
+  image: ${env:AWS_ACCOUNT_ID}.dkr.ecr.${env:AWS_REGION}.amazonaws.com/vp-ecr-10-payment-notification-service:${env:APP_VERSION}
+  role: ${env:LAMBDA_ROLE}
+  timeout: 90
+  environment:
+    RDS_DB: ${env:RDS_DB}
+    RDS_HOST: ${env:RDS_HOST}
+    RDS_PASSWORD: ${env:RDS_PASSWORD}
+    RDS_USER: ${env:RDS_USER}
+    VERSION: ${env:APP_VERSION}
+    LOG_LEVEL: ${env:LOG_LEVEL}

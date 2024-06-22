@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "serverless": "^4.0.24"
+  },
+  "name": "vp-hackathon-10",
+  "version": "1.0.0",
+  "description": "VP Bank Hackthon Team 10",
+  "repository": {
+    "type": "git"
+  },
+  "author": "TPPSoft",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/triple-beam": "^1.3.5",
+    "serverless-domain-manager": "^6.4.4"
+  }
+}

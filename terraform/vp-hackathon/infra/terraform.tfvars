@@ -1,0 +1,12 @@
+aws_region          = "ap-southeast-1"
+db_storage_type     = "gp2"
+db_name             = "vp_payment"
+db_username         = "postgres"
+db_password         = "password123"
+db_instance_class   = "db.t3.micro"
+allocated_storage   = 20
+db_engine_version   = "16.3"
+domain_url          = "trustsolute.com"
+admin_email         = "chaubao.cloud@gmail.com"
+dynamodb_table_name = "vp_payment"
+rds_identifier      = "vprdsinstance"

@@ -1,0 +1,25 @@
+service: vp
+
+frameworkVersion: "4"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+  architecture: arm64
+  memorySize: 128
+  iam:
+    role: arn:aws:iam::${env:AWS_ACCOUNT_ID}:role/vp-lambda-role
+
+functions:
+  payment-notification-service: ${file(lambda-functions/payment-notification-service/template.yml):lambdaFunction}
+  payment-validation-service: ${file(lambda-functions/payment-validation-service/template.yml):lambdaFunction}
+  process-payment-service: ${file(lambda-functions/process-payment-service/template.yml):lambdaFunction}
+  publish-new-payment-service: ${file(lambda-functions/publish-new-payment-service/template.yml):lambdaFunction}
+  start-payment-processing-service: ${file(lambda-functions/start-payment-processing-service/template.yml):lambdaFunction}
+
+custom:
+  logRetentionInDays: 30
+  esbuild:
+    exclude: []
