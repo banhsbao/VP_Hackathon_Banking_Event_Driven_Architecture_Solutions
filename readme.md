@@ -1,7 +1,7 @@
 ## Terraform Infrastructure Setup Guide
 
 Welcome to the Terraform Infrastructure Setup Guide for the VP Hackathon project. This document provides step-by-step instructions on how to initialize and deploy infrastructure using Terraform.
-![image](readme.md)
+![image](architecture.png)
 
 ### Prerequisites
 
